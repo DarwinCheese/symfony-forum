@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome to the forum!{% endblock %}</title>
@@ -8,11 +8,11 @@
         {% endblock %}
     </head>
     <body>
-        <div class="row">
+        <div class="row main">
             <div class="col s3 sidebar">
                 {% include 'components/sidebar.html.twig' %}
             </div>
-            <div class="col s9">
+            <div class="col s9 content">
                 <div class="container">
                     {% block content %}{% endblock %}
                 </div>
