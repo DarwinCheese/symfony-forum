@@ -1,7 +1,12 @@
-<h1><a href="{{ parse }}"></a>Forum</h1>
+<h1><a href="{{ path('app_index') }}"></a>Forum</h1>
 <ul class="nav-menu">
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li>
+            <p>Email: {{ app.user.email }}</p>
+        </li>
+    {% endif %}
     <li>
-        <a href="#">Login</a>
+        <a href="{{ path('app_login') }}">Login</a>
     </li>
     <li>
         <a href="#">Register</a>
